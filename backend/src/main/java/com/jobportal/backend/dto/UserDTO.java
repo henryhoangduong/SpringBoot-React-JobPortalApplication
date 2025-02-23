@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 public class UserDTO {
-    private String id;
+    private Long id;
     @NotBlank(message = "{user.name.absent}")
     private String name;
     @NotBlank(message = "{user.email.absent}")
@@ -24,7 +24,7 @@ public class UserDTO {
     public UserDTO() {
     }
 
-    public UserDTO(String id, String name, String email, String password, AccountType accountType) {
+    public UserDTO(Long id, String name, String email, String password, AccountType accountType) {
         this.id = id;
         this.name = name;
         this.email = email;

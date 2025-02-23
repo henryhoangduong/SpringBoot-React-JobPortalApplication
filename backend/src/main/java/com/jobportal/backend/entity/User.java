@@ -22,7 +22,7 @@ public class User {
     private String password;
     private AccountType accountType;
 
-    public User(String id, String name, String email, String password, AccountType accountType) {
+    public User(Long id, String name, String email, String password, AccountType accountType) {
         this.id = id;
         this.name = name;
         this.email = email;
