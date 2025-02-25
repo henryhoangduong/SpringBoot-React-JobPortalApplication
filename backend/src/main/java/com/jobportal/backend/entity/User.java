@@ -12,7 +12,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document(collation = "users")
+@Document(collection = "users")
 public class User {
     @Id
     private Long id;
