@@ -24,8 +24,13 @@ public class UserAPI {
         userDTO = userService.registerUser(userDTO);
         return new ResponseEntity<>(userDTO, HttpStatus.CREATED);
     }
-    @PostMapping("/register")
+    @GetMapping("/login")
     public ResponseEntity<UserDTO> loginUser(@RequestBody @Valid LoginDTO loginDTO) throws JobPortalException {
-        return new ResponseEntity<>(userService.loginUser(loginDTO), HttpStatus.CREATED);
+        return new ResponseEntity<>(userService.loginUser(loginDTO), HttpStatus.OK);
+    }
+
+    @PostMapping("/sendOtp/{email}")
+    public ResponseEntity<UserDTO> sendOtp(@PathVariable("email")String email ){
+
     }
 }
